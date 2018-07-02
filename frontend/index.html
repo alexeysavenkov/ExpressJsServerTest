@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Blazing Fast SQL</title>
+
+      <link rel="stylesheet" href="bootstrap.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="bootstrap.min.js"></script>
+
+      <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+      <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.css">
+      <link rel="stylesheet" type="text/css" href="styles.css">
+    
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </head>
+
+  <body>
+    <script src="query.js"></script>
+    
+    <br><br>
+    <div class="container">
+      <br><br>
+      <h1>Order list:<img class="loadingGIF" src="loading.gif" /></h1>
+      <p>
+          Filter by date range: <input class="form-control" type="text" name="daterange" value="" size="35"/>
+          <br>
+            <a href="#" class="exportCSV btn btn-primary">Export current range to csv</a>
+      </p>
+
+      <div class="orders">
+        <table class="orderTable table" data-order='[[ 0, "asc" ]]'></table>
+      </div>
+  
+      <br><br>
+    </div>
+
+  </body>
+</html>
